@@ -20,5 +20,5 @@ except Exception as e:
     print("Error! " + str(e))
 
 
-print(sys.getsizeof(int))
-print(sys.getsizeof(float))
+print("Размер int"sys.getsizeof(int()))
+print("Размер Float"sys.getsizeof(float()))
