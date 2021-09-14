@@ -6,11 +6,19 @@ C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, S
 Code, Compile, Run and Debug online from anywhere in world.
 
 '''
-print("start")
+import sys
+
 try:
-   val = int(input("input number: "))
-   tmp = 10 / val
-   print(tmp)
+    print("Enter first number")
+    num1 = float(input())
+
+    print("Enter second number")
+    num2 = float(input(input))
+
+    res = num1 / num2
 except Exception as e:
-   print("Error! " + str(e))
-print("stop")
+    print("Error! " + str(e))
+
+
+print(sys.getsizeof(int))
+print(sys.getsizeof(float))
