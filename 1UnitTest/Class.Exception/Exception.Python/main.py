@@ -9,10 +9,10 @@ Code, Compile, Run and Debug online from anywhere in world.
 import sys
 
 try:
-    print("Enter first number")
+    print("Введите первое число : ")
     num1 = float(input())
 
-    print("Enter second number")
+    print("Введите второе число: ")
     num2 = float(input(input))
 
     res = num1 / num2
