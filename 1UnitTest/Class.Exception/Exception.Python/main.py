@@ -13,9 +13,10 @@ try:
     num1 = float(input())
 
     print("Введите второе число: ")
-    num2 = float(input(input))
+    num2 = float(input())
 
     res = num1 / num2
+    print(res)
 except Exception as e:
     print("Error! " + str(e))
 
