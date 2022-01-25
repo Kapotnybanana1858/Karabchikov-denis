@@ -47,8 +47,7 @@ Regularfile - код идентификации для обычного файл
 <li>Запись: echo tekst > blockd
 <li>bash: blockd: Отказано в доступе
 bs=100M(чисто мегабайт) count=5(количество итераций)
-Чтение:  
-Удаление: rm block	d
+<li>Удаление: rm block	d
   
 ![Typeoffile b](https://user-images.githubusercontent.com/90246832/150928212-20f49580-83a5-4b97-8592-51300e3407e4.png)
 
