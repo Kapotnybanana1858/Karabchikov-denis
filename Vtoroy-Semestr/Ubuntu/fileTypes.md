@@ -59,6 +59,44 @@ bs=100M(чисто мегабайт) count=5(количество итераци
 <br>А символьные файлы устройств используются для небуферизованного обмена данными. Большинство устройств способно принимать и отправлять данные либо блоками (блочные устройства), либо сплошным потоком байтов (символьные устройства), но некоторые (такие как жёсткий диск) сочетают в себе обе эти возможности. Работа с первым типом устройств возможна либо через блочные, либо через символьные файлы, а вот с последним типом — подходят и те, и другие. 
   
   ![Typesoffile c](https://user-images.githubusercontent.com/90246832/150930897-5bbc1f8a-cfe7-41f9-848d-87f39b8ac7c5.png)
+  
+ Уточнение про жесткую ссылку
+<li>Создали папку: mkdir test && cd test
+<li>Создали файл: echo "some text" > source
+<li>Создали жесткую ссылку: ln source hardlink
+
+Добавили еще файлы для мусора
+<li>echo "some text" > file1
+<li>echo "some text" > file2
+<li>echo "some text" > file3
+<li>echo "some text" > abc
+
+В свойствах stat hardlink взяли Inode: 397128
+Поиск по иноду find -inum 397128
+Нашли файл
+
+
+СКРИПТ
+
+<br>WHERE_TO_LOOK_FOR=$1
+<br>FILE_PATH=$2
+<br>FOR_WHICH_FILE_YOU_LOOK_LINK=$3
+<br>for dirname in $(find -L $1 -samefile $2)
+<br>do
+<br>ls -l "$dirname"
+<br>ls -i1 "$dirname"
+<br>echo "Вы ищете хард ссылку для файла $2/$3. Его инод: $(stat -c %i $2/$3)"
+<br>echo "Все файлы с таким же инодом:"
+
+<br>find -inum $(stat -c %i $2/$3)
+
+<br>done
+
+<br>Для запуска bash script1.sh test /home/user/test source
+
+  
+  ![script](https://user-images.githubusercontent.com/90246832/150937802-263bc562-26c9-48b9-a4ab-7ab08d4dcbb4.png)
+
 
 
 
