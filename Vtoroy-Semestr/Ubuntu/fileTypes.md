@@ -39,6 +39,9 @@ Regularfile - код идентификации для обычного файл
 <li>Запись: echo "запись" > pkanal
 <li>Чтение: во втором окне cat pkanal
 <li>Удаление: rm pkanal
+  
+  ![typeofffile p](https://user-images.githubusercontent.com/90246832/150926899-1dfa0db6-f9d7-41d8-867d-a821cbcc61a7.png)
+
 
 
 
