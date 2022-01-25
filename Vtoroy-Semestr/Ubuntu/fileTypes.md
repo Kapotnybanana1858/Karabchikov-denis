@@ -7,3 +7,11 @@ Regularfile - код идентификации для обычного файл
 ![запись](https://user-images.githubusercontent.com/90246832/150921028-ed07d249-72f1-4ae9-b1e9-f43fa7992cfe.png)
 ![Typesoffile -](https://user-images.githubusercontent.com/90246832/150921735-b5fd12bf-fcfd-46f1-9f1b-703fdf3d921d.png)
 
+“d” directory директория (каталог) 
+<li>Создание: mkdir Directoria (просмотр того, что она создан ls -ld Directoria)
+<li>Запись: Чтобы добавить файл в директорию нужно перейти в нее (cd Directoria) и создать файл (touch Regularfile.txt) или touch /home/user/Перезаписать/Regularfile
+<li>Чтение: С помощью команды ls можно посмотреть, что находится в директории
+<li>Переименовать: mv Directoria ~/Перезаписать
+<li>Удаление: Чтобы удалить директорию надо вернуться в папку, в которой она была создана (cd ..). Команда rmdir Directoria. Однако если нужно удалить папку, которой содержатся файлы rm -r  Directoria/ (просмотр того, что она удалена ls -ld Directoria)
+![Typesoffile d](https://user-images.githubusercontent.com/90246832/150922715-02346d97-dbc9-4b40-850e-3ffe72866fb6.png)
+
