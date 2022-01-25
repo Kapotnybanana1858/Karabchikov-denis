@@ -33,6 +33,13 @@ Regularfile - код идентификации для обычного файл
 <li>Удаление: системной функции unlink или командой rm socket.sock
   
   ![Typeofffile s](https://user-images.githubusercontent.com/90246832/150926238-ba0af718-e941-4541-b17c-653cc4ccd7c1.png)
+  
+  “p” pipe именованный канал Как и локальные сокеты, именованные каналы позволяют осуществлять обмен данными между локальными процессами.
+<li>Создание: mkfifo pkanal и просмотр ls -ld pkanal
+<li>Запись: echo "запись" > pkanal
+<li>Чтение: во втором окне cat pkanal
+<li>Удаление: rm pkanal
+
 
 
 
