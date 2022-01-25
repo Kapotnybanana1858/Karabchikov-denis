@@ -71,9 +71,9 @@ bs=100M(чисто мегабайт) count=5(количество итераци
 <li>echo "some text" > file3
 <li>echo "some text" > abc
 
-В свойствах stat hardlink взяли Inode: 397128
-Поиск по иноду find -inum 397128
-Нашли файл
+<br>В свойствах stat hardlink взяли Inode: 397128
+<br>Поиск по иноду find -inum 397128
+<br>Нашли файл
 
 
 СКРИПТ
