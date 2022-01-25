@@ -23,6 +23,7 @@ Regularfile - код идентификации для обычного файл
 
 <li>Чтение: cat file2
 <li>Удаление: unlink file1. Просмотр того, что ссылка удалилась ls -ld file1
-  ![Typeoffile i](https://user-images.githubusercontent.com/90246832/150924502-ae596f41-d15d-4d0a-ade5-4e55145cd82e.png)
+ ![Typeoffile i](https://user-images.githubusercontent.com/90246832/150924574-5452a364-2af6-4e2e-ac09-9f464de5e1bc.png)
+
 
 
