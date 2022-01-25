@@ -13,5 +13,5 @@ Regularfile - код идентификации для обычного файл
 <li>Чтение: С помощью команды ls можно посмотреть, что находится в директории
 <li>Переименовать: mv Directoria ~/Перезаписать
 <li>Удаление: Чтобы удалить директорию надо вернуться в папку, в которой она была создана (cd ..). Команда rmdir Directoria. Однако если нужно удалить папку, которой содержатся файлы rm -r  Directoria/ (просмотр того, что она удалена ls -ld Directoria)
-![Typesoffile d](https://user-images.githubusercontent.com/90246832/150922715-02346d97-dbc9-4b40-850e-3ffe72866fb6.png)
 
+![Typeoffile d](https://user-images.githubusercontent.com/90246832/150922837-49873211-c34b-4d3c-8bc2-f47c62c4d9a1.png)
