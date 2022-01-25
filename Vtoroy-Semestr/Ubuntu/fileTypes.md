@@ -32,7 +32,8 @@ Regularfile - код идентификации для обычного файл
 <li>Чтение: nc -U socket.sock (клиент)
 <li>Удаление: системной функции unlink или командой rm socket.sock
   
-  
+  ![Typeofffile s](https://user-images.githubusercontent.com/90246832/150926238-ba0af718-e941-4541-b17c-653cc4ccd7c1.png)
+
 
 
 
