@@ -41,6 +41,18 @@ Regularfile - код идентификации для обычного файл
 <li>Удаление: rm pkanal
   
   ![typeofffile p](https://user-images.githubusercontent.com/90246832/150926899-1dfa0db6-f9d7-41d8-867d-a821cbcc61a7.png)
+  
+  “b” block device файл блочного устройства (sudo su)
+<li>Создание: sudo mknod blockd b 5 100
+<li>Запись: echo tekst > blockd
+<li>bash: blockd: Отказано в доступе
+bs=100M(чисто мегабайт) count=5(количество итераций)
+Чтение:  
+Удаление: rm block	d
+  
+  ![Typeoffile b](https://user-images.githubusercontent.com/90246832/150928212-20f49580-83a5-4b97-8592-51300e3407e4.png)
+
+
 
 
 
