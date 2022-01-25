@@ -25,6 +25,15 @@ Regularfile - код идентификации для обычного файл
 <li>Удаление: unlink file1. Просмотр того, что ссылка удалилась ls -ld file1
 
 ![Typeoffile i](https://user-images.githubusercontent.com/90246832/150924642-6f013b0c-80dd-4670-ab4d-2ceb6740e0c2.png)
+  
+  “s” unix sockets файл локального сокета. Сокеты локального домена используются для обмена данными между процессами. В основном они используются такими службами, как X windows, syslog и т.д. 
+<li>Создание: mkfifo socket.sock (можно не использовать)
+<li>Запись: nc -lU socket.sock (сервер)
+<li>Чтение: nc -U socket.sock (клиент)
+<li>Удаление: системной функции unlink или командой rm socket.sock
+  
+  
+
 
 
 
