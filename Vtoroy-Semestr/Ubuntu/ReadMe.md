@@ -73,6 +73,30 @@ https://docs.google.com/document/d/1z27O5xLblWKjIxcXRZnbd1smm-oYa8bt/edit
 <li>/proc/PID/exe - симлинк на исполняемый файл
 <li>/proc/PID/cwd - симлинк на директорию, откуда запущен процесс
 <li>/proc/PID/status - состояние процесса в человекочитаемом виде
+
+#include <unistd.h>
+#include <malloc.h>
+#include <stdio.h>
+#include <sys/mman.h>
+
+int data=10; 
+int main(int argc, char *argv[])
+{
+int stack; 
+void *heap;
+heap=malloc(1);
+printf("PID=%i\n", getpid());
+printf("Text=%p\n", main);
+printf("Data=%p\n", &data);
+printf("libc.so=%p\n", printf);
+printf("Stack=%p\n", &stack);
+
+sleep(100);
+
+return 0;
+}  
+  
+  ![Снимок экрана от 2022-01-31 11-32-00](https://user-images.githubusercontent.com/90246832/151761798-e63529f1-2c0d-43fd-b7a0-63efc83bf650.png)
   
   
  
