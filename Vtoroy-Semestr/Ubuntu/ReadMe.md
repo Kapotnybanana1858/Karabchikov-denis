@@ -99,4 +99,25 @@ https://docs.google.com/document/d/1z27O5xLblWKjIxcXRZnbd1smm-oYa8bt/edit
   ![Снимок экрана от 2022-01-31 11-32-00](https://user-images.githubusercontent.com/90246832/151761798-e63529f1-2c0d-43fd-b7a0-63efc83bf650.png)
   
   
+#include <unistd.h>
+#include <malloc.h>
+#include <stdio.h>
+#include <sys/mman.h>
+
+int data=10;
+int func(int a)
+{
+printf("%i\n", a);
+return func(a+1);
+}
+int main(int argc, char *argv[])
+{
+printf("PID=%i\n", getpid());
+func(1);
+return 0;
+}
+  
+  ![Снимок экрана от 2022-01-31 11-47-43](https://user-images.githubusercontent.com/90246832/151763834-f0665bfd-c653-4c6b-ac40-a9573bc71566.png)
+
+  
  
