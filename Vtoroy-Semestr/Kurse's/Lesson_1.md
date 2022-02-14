@@ -27,6 +27,16 @@
   
   ![image](https://user-images.githubusercontent.com/90246832/153836958-5dde68f9-ab0d-4a4c-a318-7476a83facf9.png)
 
+  <br>Меню window
+  
+  ![image](https://user-images.githubusercontent.com/90246832/153837364-8b87bc2c-a832-4628-9876-caef6caba76d.png)
+  
+<br>Меню help
+  
+  ![image](https://user-images.githubusercontent.com/90246832/153837521-455d9e60-25d2-422d-871b-84cb3ab257d1.png)
+
+
+
 
 
 
