@@ -42,8 +42,12 @@ c помощью командной строки : ./pg_start
         return pos
 5 Как мы получаем данные из таблицы?
 с помощью : SELECT count(id) FROM ticket_flights_tmp
-
-
+# Защита Кролик:
+1. Что такое RabbitMQ?
+2. Что это за команда docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq ?
+3. Как подключиться к брокеру
+4. Как отправить сообщение
+5. Как получить сообщение
 <br>LOG AND PASS :<br>
 <br>KAPOTNYA<br>
 <br>QWERTS1858<br>
