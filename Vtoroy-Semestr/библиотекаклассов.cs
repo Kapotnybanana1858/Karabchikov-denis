@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ConsoleApptestnew1
 {
@@ -57,10 +58,10 @@ namespace ConsoleApptestnew1
             DateTime now = DateTime.Now;
             List<string> students = new List<string>();
             students.Add(students1.FIO);
-           
+
             for (int i = 0; i < 10; i++)
             {
-                
+
                 Students students2 = new Students();
                 string c = "Student" + Convert.ToString(i);
                 students2.FIO = c;
@@ -69,9 +70,12 @@ namespace ConsoleApptestnew1
                 students.Add(students2.FIO);
                 Console.WriteLine(students[i]);
 
+
             }
             // students.ForEach(p => Console.WriteLine($"{p.FIO}"));
             List<Mark> a = GetMarks(now, students);
+            Console.WriteLine(GetCountDisease(a));
+            Console.WriteLine(GetCountTruancy(a));
 
 
 
@@ -80,34 +84,62 @@ namespace ConsoleApptestnew1
         public static List<Mark> GetMarks(DateTime now, List<string> students)
         {
             List<Mark> res = new List<Mark>();
+  Random rnd = new Random();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 30; i++)
             {
-                Random rnd = new Random();
-                int value = rnd.Next(2, 5);
+                string[] bcv = { "Б", "П", "У", "2", "3", "4", "5" };
+              
+                int value = rnd.Next(bcv.Length);
                 Mark mark = new Mark();
                 mark.date = now.AddDays(i);
-                mark.progul = value;
+                mark.progul = bcv[value];
                 res.Add(mark);
 
-                
+
 
             }
-            
-for (int j = 0; j < 10; j++)
-                {
-                    Console.WriteLine(students[j]);
-res.ForEach(p => Console.WriteLine($"{p.date}, {p.progul} "));
-                }
+
+            for (int j = 0; j < 10; j++)
+            {
+                Console.WriteLine(students[j]);
+                Console.WriteLine(GetCountDisease(res));
+                Console.WriteLine(GetCountTruancy(res));
+                res.ForEach(p => Console.WriteLine($"{p.date}, {p.progul} "));
+            }
             return res;
         }
 
 
+        public static int GetCountDisease(List<Mark> marks)
+        {
+            
+                var Bol = from p in marks
+                                     where p.progul == "Б"
+                                     select p;
+            int count = 0;
+            foreach (Mark mark in Bol)
+            {
+                count++; 
+            }
 
+            return count;
+        }
 
+        public static int GetCountTruancy(List<Mark> marks)
+        {
 
+            var Prog = from p in marks
+                      where p.progul == "П"
+                      select p;
+            int countt = 0;
+            foreach (Mark mark in Prog)
+            {
+                countt++;
+            }
 
-
+            return countt;
+        }
     }
     public class Students
     {
@@ -119,6 +151,6 @@ res.ForEach(p => Console.WriteLine($"{p.date}, {p.progul} "));
     public class Mark
     {
         public DateTime date;
-        public int progul;
+        public string progul;
     }
 }
